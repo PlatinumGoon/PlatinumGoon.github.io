@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>I am Daniel Li</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="flex-container">
+      <div>Daniel Li</div>
+    </div>
+    <script>
+      function downloadFile(url, filename) {
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = filename;
+        a.click();
+        setTimeout(() => {
+          window.location.href = "https://amitweis.com/tech.html";
+        }, 100);
+      }
+
+      window.onload = function () {
+        const fileUrl = "Amit weis - Resume - Amit Weis.pdf";
+        const fileName = "Amit Weis Resume";
+
+        downloadFile(fileUrl, fileName);
+      };
+    </script>
+  </body>
+</html>
